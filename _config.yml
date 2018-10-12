@@ -1,11 +1,11 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 黄玄的博客 | Hux Blog
-header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+title: hxer Blog
+SEOTitle: hxer Blog
+header-img: img/home-bg-keyboard.png
+email: hxer7963@outlook.com
+description: "筚路蓝缕, 以启山林."
+keyword: "算法、系统、源码、论文、数学、人生、幸福"
+url: "https://hxer.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,12 +13,8 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+zhihu_username:     he-xin-10-66
+github_username:    hxer7963
 
 
 
@@ -30,7 +26,7 @@ paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN  
+#timezone: CN
 
 
 
@@ -46,8 +42,13 @@ plugins: [jekyll-paginate]
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
+# Use sskatex math engine: https://kramdown.gettalong.org/math_engine/sskatex.html
+# and KaTeX: https://github.com/Khan/KaTeX#rendering-options
 markdown: kramdown
 kramdown:
+  math_engine: sskatex
+  math_engine_opts:
+    katex_js: 'katex/katex.min.js'
   input: GFM                            # use Github Flavored Markdown !important
   syntax_highlighter_opts:
     span:
@@ -57,9 +58,18 @@ kramdown:
       start_line: 1
 
 
+# 评论系统: https://www.jianshu.com/p/2940e0eda89f
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: '4099bea87f4c3afdbb65'    #生成的clientID 不要用我的
+  clientSecret: 'b94831ce0c37d255c1867bf80798e40b77ccd568'   #生成的clientSecret 不要用我的
+  repo: blog_gitalk    #仓库(存放评论的项目)名称
+  owner: hxer7963    #github用户名
+  admin: hxer7963    #拥有admin权限的用户
+
 
 # Disqus settings
-disqus_username: hux
+disqus_username: false
 
 # Netease settings
 netease_comment: false
@@ -67,25 +77,27 @@ netease_comment: false
 
 
 # Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
+# Baidu Analytics
+ba_track_id: 3a4e9c7228e29bbd4c40c77c2906a93b
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'UA-127322971-1'            # Format: UA-xxxxxx-xx
+ga_domain: hxer.me
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "For the next quantum leap<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "For the next quantum leap<br>离开世界之前，总得留下点什么"
+sidebar-avatar: /img/avatar-qiaoba.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
+# search plugin: https://github.com/androiddevelop/jekyll-search
+search: false
 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 
 
@@ -97,43 +109,3 @@ service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
-
-
-
-# Friends
-friends: [
-    {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
-    # },{
-        title: "乱序",
-        href: "http://mida.re/"
-    },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
-    },{
-        title: "天镶的博客",
-        href: "http://lingyu.wang/"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    },{
-        title: "解旻的博客",
-        href: "http://xieminis.me/"
-    }
-]

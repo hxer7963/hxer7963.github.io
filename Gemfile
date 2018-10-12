@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'jekyll-paginate'
+gem 'jekyll'
+gem 'sskatex'
+gem 'execjs'
+gem 'therubyracer'
+gem 'therubyrhino'
+gem 'duktape'

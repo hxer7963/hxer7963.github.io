@@ -9,17 +9,18 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
-                    </iframe>
+                    Proudly powered by <a href="https://github.com/hxer7963/hxer7963.github.io">Github</a> with <a href="https://github.com/Huxpro/huxpro.github.io">Hux Theme</a>
                 </p>
             </div>
         </div>
     </div>
 </footer>
+
+<!-- jQuery -->
+<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!-- jQuery -->
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
@@ -90,6 +91,19 @@
         var $nav = document.querySelector("nav");
         if($nav) FastClick.attach($nav);
     })
+</script>
+
+<!--katex -->
+<script>
+    $("script[type='math/tex']").replaceWith(function() {
+        var tex = $(this).text();
+        return KaTeX.renderToString(tex, {displayMode: false});
+    });
+
+    $("script[type='math/tex; mode=display']").replaceWith(function() {
+        var tex = $(this).html();
+        return KaTeX.renderToString(tex.replace(/%.*/g, ''), {displayMode: true})
+    });
 </script>
 
 

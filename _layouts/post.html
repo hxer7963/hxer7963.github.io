@@ -175,3 +175,18 @@ layout: default
     }
 </style>
 {% endif %}
+
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+    owner: 'hxer7963',
+    repo: 'blog_gitalk',
+    oauth: {
+        client_id: '4099bea87f4c3afdbb65',
+        client_secret: 'b94831ce0c37d255c1867bf80798e40b77ccd568',
+    },
+});
+gitment.render('gitmentContainer');
+</script>
