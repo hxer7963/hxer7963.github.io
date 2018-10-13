@@ -66,6 +66,8 @@ gitalk:
   repo: blog_gitalk    #仓库(存放评论的项目)名称
   owner: hxer7963    #github用户名
   admin: hxer7963    #拥有admin权限的用户
+  distractionFeeeMode: true  # 类似于Facebook阴影效果
+  labels: ['Gitalk']  # 用于生产Issue的标签
 
 
 # Disqus settings
